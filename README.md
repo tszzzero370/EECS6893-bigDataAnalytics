@@ -2,7 +2,7 @@
 This is a course project of EECS E6893 Big Data Analytics at Columbia University.
 
 ## Generate overdue_details.csv
-Create a schema in mysql and load csv files in ./input to mysql databases.
+Create a schema in mysql and load csv files in "./input" to mysql databases.
 Operate in mysql database console.
 ```sql
 update credit_record set STATUS=REPLACE (STATUS,'0','1');
