@@ -28,3 +28,13 @@ left join
 on a.aid = b.id;
 ```
 export table overdue_details as a csv file.
+
+## Generate html files
+run
+```shell
+pip install -r requiremnts.txt
+```
+run analysis.py
+```shell
+python analysis.py
+```
