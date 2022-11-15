@@ -32,7 +32,7 @@ export table overdue_details as a csv file.
 ## Generate html files
 run
 ```shell
-pip install -r requiremnts.txt
+pip install -r requirements.txt
 ```
 run analysis.py
 ```shell
