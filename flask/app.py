@@ -15,6 +15,10 @@ def age():
 def gender():
     return render_template('gender.html')
 
+@app.route('/education')
+def education():
+    return render_template('education.html')
+
 @app.route('/families')
 def families():
     return render_template("families_OverDue.html")
