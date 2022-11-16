@@ -9,7 +9,11 @@ def hello_world():
 
 @app.route('/age')
 def age():
-    return render_template("age_OverDue.html")
+    return render_template("age_distribution.html")
+
+@app.route('/gender')
+def gender():
+    return render_template('gender.html')
 
 @app.route('/families')
 def families():
