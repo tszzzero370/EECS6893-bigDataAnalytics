@@ -1,6 +1,6 @@
 # credit-card-analysis
 This is a course project of EECS E6893 Big Data Analytics at Columbia University.
-
+```shell
 ├── README.md
 ├── analysis_demo.ipynb
 ├── flask
@@ -30,6 +30,7 @@ This is a course project of EECS E6893 Big Data Analytics at Columbia University
     │       └── pie_edu_paidOff.html
     └── by_propertyOwning
         └── property
+```
 
 ## Generate overdue_details.csv
 Create a schema in mysql and load csv files in "./input" to mysql databases.
