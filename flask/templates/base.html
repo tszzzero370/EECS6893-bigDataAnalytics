@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}{% endblock %}</title>
+{#    <title>{% block title %}{% endblock %}</title>#}
+    <title>Credit Analysis</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/bootstrap.5.2.2.min.css') }}">
 </head>
 
@@ -23,26 +24,26 @@
         <li class="nav-item">
           <a class="nav-link" href="https://www.ee.columbia.edu/~cylin/course/bigdata/">EECS6893</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Details
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/age">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
+{#        <li class="nav-item dropdown">#}
+{#          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">#}
+{#            Details#}
+{#          </a>#}
+{#          <ul class="dropdown-menu">#}
+{#            <li><a class="dropdown-item" href="/age">Action</a></li>#}
+{#            <li><a class="dropdown-item" href="#">Another action</a></li>#}
+{#            <li><hr class="dropdown-divider"></li>#}
+{#            <li><a class="dropdown-item" href="#">Something else here</a></li>#}
+{#          </ul>#}
+{#        </li>#}
+{#        <li class="nav-item">#}
+{#          <a class="nav-link disabled">Disabled</a>#}
+{#        </li>#}
       </ul>
 
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+{#      <form class="d-flex" role="search">#}
+{#        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">#}
+{#        <button class="btn btn-outline-success" type="submit">Search</button>#}
+{#      </form>#}
     </div>
   </div>
 </nav>
@@ -61,23 +62,40 @@
             <li><a class="dropdown-item" href="/gender">Gender</a></li>
             <li><a class="dropdown-item" href="/education">Education</a></li>
           </ul>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Property
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="/">Real Estates</a></li>
+        <li><a class="dropdown-item" href="/">Vehicles</a></li>
+      </ul>
+    </li>
+        <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Family
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="/">Family Size</a></li>
+          <li><a class="dropdown-item" href="/">Marriage</a></li>
+        <li><a class="dropdown-item" href="/">Children</a></li>
+      </ul>
+    </li>
         </li>
 
 {#  <li class="nav-item">#}
 {#    <a class="nav-link active" aria-current="page" href="/age">Age</a>#}
 {#  </li>#}
   <li class="nav-item">
-    <a class="nav-link" href="/families">Family</a>
+    <a class="nav-link" href="/">Contact</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="/income">Income</a>
+    <a class="nav-link" href="/">Occupation</a>
   </li>
     <li class="nav-item">
-    <a class="nav-link" href="/past_due">Overdue History</a>
-  </li>
-    <li class="nav-item">
-    <a class="nav-link" href="/real_estate">Real Estate</a>
-  </li>
+    <a class="nav-link" href="/">Income</a>
+    </li>
 </ul>
 
 
