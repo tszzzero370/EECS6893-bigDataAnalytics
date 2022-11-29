@@ -34,8 +34,7 @@ This is a course project of EECS E6893 Big Data Analytics at Columbia University
 
 ## Generate overdue_details.csv
 Create a schema in mysql and load csv files in "./input" to mysql databases.
-Operate in mysql database console.
-
+run **preprocess.sql** to do pre processing. 
 export table overdue_details as a csv file.
 
 ## Generate html files
