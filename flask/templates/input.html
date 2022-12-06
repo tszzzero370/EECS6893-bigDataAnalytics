@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>about</title>
+    {% block head %}
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" \
+                integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" \
+                crossorigin="anonymous">
+        </script>
+        <script src="{{ url_for('static', filename='js/input.js') }}"></script>
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+    <br>
+    <div class="row mt-4">
+        <form style="margin-left: 100px; margin-right: 500px">
+            <div>Please input your personal information.</div><br>
+
+            <div class="mb-3">
+                <label for="age" class="form-label">Age</label><br>
+                <input id="age" class="form-control" style="width: 300px">
+            </div>
+
+            <div class="mb-3">
+                <label for="gender" class="form-label">Gender</label><br>
+                <select class="form-select" style="width: 300px" id="gender">
+                    <option selected>Open this select menu</option>
+                    <option value="0">Male</option>
+                    <option value="1">Female</option>
+                    <option value="2">Others</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="education" class="form-label">Education</label><br>
+                <select class="form-select" aria-label="Default select example" style="width: 300px" id="education">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Other</option>
+                </select>
+            </div>
+
+            {#  <div class="mb-3">#}
+            {#    <label for="exampleInputPassword1" class="form-label">Password</label><br>#}
+            {#    <input type="password" id="exampleInputPassword1" style="width: 300px">#}
+            {#  </div>#}
+            {#  <div class="mb-3 form-check">#}
+            {#    <input type="checkbox" class="form-check-input" id="exampleCheck1" value="1">#}
+            {#    <label class="form-check-label" for="exampleCheck1">Check me out</label>#}
+            {#  </div>#}
+            <br>
+            <button type="submit" class="btn btn-primary" style="margin-left: 120px" id="submit">Submit</button>
+        </form>
+    </div>
+
+{% endblock %}
+</body>
+</html>

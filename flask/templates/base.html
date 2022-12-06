@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
 {#    <title>{% block title %}{% endblock %}</title>#}
     <title>Credit Analysis</title>
+    {% block head %}{% endblock %}
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/bootstrap.5.2.2.min.css') }}">
 </head>
 
@@ -96,11 +97,17 @@
     <li class="nav-item">
     <a class="nav-link" href="/">Income</a>
     </li>
+
+
+    <a class="btn btn-primary" href="/predict" role="button">Predict</a>
 </ul>
 
 
 {% block body %}{% endblock %}
 
+<br>
+<br>
+<br>
 <footer >This is a course project of EECS6893 @ Columbia University</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
