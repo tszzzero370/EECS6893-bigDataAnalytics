@@ -39,7 +39,14 @@ def property():
 
 @app.route('/family')
 def family():
-    pass
+    if request.url.split('=')[1] == 'marriage':
+        return render_template("family/marriage.html")
+    elif request.url.split('=')[1] == 'children':
+        return render_template('family/children.html')
+    elif request.url.split('=')[1] == 'size':
+        return render_template('family/size.html')
+    else:
+        return hello_world
 
 
 @app.route('/contact')
@@ -48,11 +55,21 @@ def contact():
 
 @app.route('/occupation')
 def occupation():
-    pass
+    if request.url.split('=')[1] == 'type':
+        return render_template("occupation/type.html")
+    elif request.url.split('=')[1] == 'status':
+        return render_template('occupation/status.html')
+    else:
+        return hello_world
 
 @app.route('/income')
 def income():
-    pass
+    if request.url.split('=')[1] == 'annual':
+        return render_template("income/annual.html")
+    elif request.url.split('=')[1] == 'category':
+        return render_template('income/income_category.html')
+    else:
+        return hello_world
 
 @app.route('/about')
 def about():
