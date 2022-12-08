@@ -16,46 +16,193 @@
 {% block body %}
     <br>
     <div class="row mt-4">
-        <form style="margin-left: 100px; margin-right: 500px">
+        <form style="margin-left: 200px; margin-right: 500px">
             <div>Please input your personal information.</div><br>
 
+            {#birthday#}
             <div class="mb-3">
-                <label for="age" class="form-label">Age</label><br>
-                <input id="age" class="form-control" style="width: 300px">
+                <label for="birthday" class="form-label" style="color: grey">Birthday</label><br>
+                <input type="date" id="birthday" control-id="ControlID-15">
             </div>
 
+{#            Gender#}
             <div class="mb-3">
-                <label for="gender" class="form-label">Gender</label><br>
-                <select class="form-select" style="width: 300px" id="gender">
-                    <option selected>Open this select menu</option>
-                    <option value="0">Male</option>
-                    <option value="1">Female</option>
-                    <option value="2">Others</option>
+                <label for="gender" class="form-label" style="color: grey">Gender</label><br>
+                <select class="form-select" style="width: 300px"id="gender">
+                    <option selected value="-1">Please select one</option>
+                    <option value="0">Female</option>
+                    <option value="1">Male</option>
                 </select>
             </div>
 
+            {#            education#}
             <div>
-                <label for="education" class="form-label">Education</label><br>
+                <label for="education" class="form-label" style="color: grey">Education</label><br>
                 <select class="form-select" aria-label="Default select example" style="width: 300px" id="education">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Other</option>
+                    <option selected value="-1">Please select one</option>
+                    <option value="0">Academic</option>
+                    <option value="1">Higher Education</option>
+                    <option value="2">Incomplete Higher Education</option>
+                    <option value="3">Primary</option>
+                    <option value="4">Secondary</option>
                 </select>
             </div>
 
-            {#  <div class="mb-3">#}
-            {#    <label for="exampleInputPassword1" class="form-label">Password</label><br>#}
-            {#    <input type="password" id="exampleInputPassword1" style="width: 300px">#}
-            {#  </div>#}
-            {#  <div class="mb-3 form-check">#}
-            {#    <input type="checkbox" class="form-check-input" id="exampleCheck1" value="1">#}
-            {#    <label class="form-check-label" for="exampleCheck1">Check me out</label>#}
-            {#  </div>#}
+{#            Car#}
+            <div class="mb-3">
+                <label for="car" class="form-label" style="color: grey">Do you own car(s)?</label><br>
+                <select class="form-select" style="width: 300px" id="car">
+                    <option selected value="-1">Please select one</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+{#            Realty#}
+            <div class="mb-3">
+                <label for="realty" class="form-label" style="color: grey">Do you own reality(s)?</label><br>
+                <select class="form-select" style="width: 300px" id="realty">
+                    <option selected value="-1">Please select one</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+{#            housing type#}
+            <div class="mb-3">
+                <label for="housing" class="form-label" style="color: grey">Housing Type</label><br>
+                <select class="form-select" style="width: 300px" id="housing">
+                    <option selected value="-1">Please select one</option>
+                    <option value="0">Co-op Apartment</option>
+                    <option value="1">House/Apartment</option>
+                    <option value="2">Municipal Apartment</option>
+                    <option value="3">Office Apartment</option>
+                    <option value="4">Rented Apartment</option>
+                    <option value="5">With Parents</option>
+                </select>
+            </div>
+{#            family#}
+            <div class="mb-3">
+                <label for="family" class="form-label" style="color: grey">How many people are in your family?</label><br>
+                <input id="family" class="form-control" style="width: 300px">
+            </div>
+
+{#            Marital Status#}
+            <div class="mb-3">
+                <label for="marital" class="form-label" style="color: grey">Marital Status</label><br>
+                <select class="form-select" style="width: 300px" id="marital">
+                    <option selected value="-1">Please select one</option>
+                    <option value="0">Civil Marriage</option>
+                    <option value="1">Married</option>
+                    <option value="2">Separated</option>
+                    <option value="3">Single</option>
+                    <option value="4">Widow</option>
+                </select>
+            </div>
+
+{#            children#}
+            <div class="mb-3">
+                <label for="children" class="form-label" style="color: grey">How many children do you have?</label><br>
+                <input id="children" class="form-control" style="width: 300px">
+            </div>
+
+{#            income type#}
+            <div class="mb-3">
+                <label for="income_type" class="form-label" style="color: grey">What's your income type?</label><br>
+                <select class="form-select" style="width: 300px" id="income_type">
+                    <option selected value="-1">Please select one</option>
+                    <option value="0">Commercial Associate</option>
+                    <option value="1">Pensioner</option>
+                    <option value="2">State Servant</option>
+                    <option value="3">Student</option>
+                    <option value="4">Working</option>
+                </select>
+            </div>
+
+{#            occupation#}
+            <div class="mb-3">
+                <label for="occupation" class="form-label" style="color: grey">Occupation</label><br>
+                <select class="form-select" style="width: 300px" id="occupation">
+                    <option selected value="-1">Please select one</option>
+                    <option value="0">No Job</option>
+                    <option value="1">Accountants</option>
+                    <option value="2">Cleaning Staff</option>
+                    <option value="3">Cooking Staff</option>
+                    <option value="4">Core Staff</option>
+                    <option value="5">Drivers</option>
+                    <option value="6">HR Staff</option>
+                    <option value="7">High Skill Tech Staff</option>
+                    <option value="8">IT Staff</option>
+                    <option value="9">Laborers</option>
+                    <option value="10">Low Skill Staff</option>
+                    <option value="11">Managers</option>
+                    <option value="12">Medical Staff</option>
+                    <option value="13">Private Service Staff</option>
+                    <option value="14">Realty Agents</option>
+                    <option value="15">Sales Staff</option>
+                    <option value="16">Secretaries</option>
+                    <option value="17">Security Staff</option>
+                    <option value="18">Waiters/Barmen Staff</option>
+                </select>
+            </div>
+
+
+{#            income#}
+            <div class="mb-3">
+                <label for="income" class="form-label" style="color: grey">Annual Income in USD</label><br>
+                <input id="income" class="form-control" style="width: 300px">
+            </div>
+
+{#            Employ start date#}
+            <div class="mb-3">
+                <label for="employ_date" class="form-label" style="color: grey">First Day of Employment</label><br>
+                <input type="date" id="employ_date" control-id="ControlID-15">
+            </div>
+
+{#            mobile number#}
+            <div class="mb-3">
+                <label for="mobile" class="form-label" style="color: grey">Do you have a mobile number?</label><br>
+                <select class="form-select" style="width: 300px" id="mobile">
+                    <option selected value="-1">Please select one</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+{#            work number#}
+            <div class="mb-3">
+                <label for="work_phone" class="form-label" style="color: grey">Do you have a work phone number?</label><br>
+                <select class="form-select" style="width: 300px" id="work_phone">
+                    <option selected value="-1">Please select one</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+{#            fix-line#}
+            <div class="mb-3">
+                <label for="fixed_line" class="form-label" style="color: grey">Do you have a fixed line number?</label><br>
+                <select class="form-select" style="width: 300px" id="fixed_line">
+                    <option selected value="-1">Please select one</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+{#            email#}
+            <div class="mb-3">
+                <label for="email" class="form-label" style="color: grey">Do you have an email?</label><br>
+                <select class="form-select" style="width: 300px" id="email">
+                    <option selected value="-1">Please select one</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+
+
             <br>
             <button type="submit" class="btn btn-primary" style="margin-left: 120px" id="submit">Submit</button>
         </form>
     </div>
+
 
 {% endblock %}
 </body>
