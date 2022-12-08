@@ -7,11 +7,12 @@
 
 </head>
 <body>
-    <div id="08660e9b04c34202ab53e4dfdef27249" class="chart-container" style="width:900px; height:500px;"></div>
+    <h1 align="center">Credit Status by the Number of Children</h1>
+    <div id="7b4702386fc94da1afa19ffc47093032" class="chart-container" style="width:1200px; height:500px;"></div>
     <script>
-        var chart_08660e9b04c34202ab53e4dfdef27249 = echarts.init(
-            document.getElementById('08660e9b04c34202ab53e4dfdef27249'), 'white', {renderer: 'canvas'});
-        var option_08660e9b04c34202ab53e4dfdef27249 = {
+        var chart_7b4702386fc94da1afa19ffc47093032 = echarts.init(
+            document.getElementById('7b4702386fc94da1afa19ffc47093032'), 'white', {renderer: 'canvas'});
+        var option_7b4702386fc94da1afa19ffc47093032 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -49,9 +50,8 @@
     "series": [
         {
             "type": "line",
-            "name": "Paidoff population",
+            "name": "Overdue",
             "connectNulls": false,
-            "symbol": "emptyCircle",
             "symbolSize": 4,
             "showSymbol": true,
             "smooth": false,
@@ -60,38 +60,38 @@
             "data": [
                 [
                     "0 child",
-                    10474
+                    58.44
                 ],
                 [
                     "1 child",
-                    2943
+                    60.72
                 ],
                 [
                     "2 children",
-                    1286
+                    60.5
                 ],
                 [
                     "3 children",
-                    150
+                    64.2
                 ],
                 [
                     "4 children",
-                    33
+                    47.62
                 ],
                 [
                     "5 children",
-                    15
+                    25.0
                 ]
             ],
             "hoverAnimation": true,
             "label": {
-                "show": false,
+                "show": true,
                 "position": "top",
                 "margin": 8
             },
             "lineStyle": {
                 "show": true,
-                "width": 1,
+                "width": 2,
                 "opacity": 1,
                 "curveness": 0,
                 "type": "solid"
@@ -104,9 +104,8 @@
         },
         {
             "type": "line",
-            "name": "Overdue population",
+            "name": "Paidoff",
             "connectNulls": false,
-            "symbol": "emptyCircle",
             "symbolSize": 4,
             "showSymbol": true,
             "smooth": false,
@@ -115,38 +114,38 @@
             "data": [
                 [
                     "0 child",
-                    14727
+                    41.56
                 ],
                 [
                     "1 child",
-                    4549
+                    39.28
                 ],
                 [
                     "2 children",
-                    1970
+                    39.5
                 ],
                 [
                     "3 children",
-                    269
+                    35.8
                 ],
                 [
                     "4 children",
-                    30
+                    52.38
                 ],
                 [
                     "5 children",
-                    5
+                    75.0
                 ]
             ],
             "hoverAnimation": true,
             "label": {
-                "show": false,
+                "show": true,
                 "position": "top",
                 "margin": 8
             },
             "lineStyle": {
                 "show": true,
-                "width": 1,
+                "width": 2,
                 "opacity": 1,
                 "curveness": 0,
                 "type": "solid"
@@ -161,12 +160,12 @@
     "legend": [
         {
             "data": [
-                "Paidoff population",
-                "Overdue population"
+                "Overdue",
+                "Paidoff"
             ],
             "selected": {
-                "Paidoff population": true,
-                "Overdue population": true
+                "Overdue": true,
+                "Paidoff": true
             },
             "show": true,
             "padding": 5,
@@ -176,7 +175,7 @@
         }
     ],
     "tooltip": {
-        "show": false,
+        "show": true,
         "trigger": "item",
         "triggerOn": "mousemove|click",
         "axisPointer": {
@@ -194,7 +193,7 @@
     },
     "xAxis": [
         {
-            "type": "category",
+            "name": "Number of Children",
             "show": true,
             "scale": false,
             "nameLocation": "end",
@@ -226,20 +225,19 @@
     ],
     "yAxis": [
         {
-            "type": "value",
+            "type": "log",
+            "name": "Overdue/Paidoff in percentage %",
             "show": true,
-            "scale": false,
+            "scale": true,
             "nameLocation": "end",
             "nameGap": 15,
+            "interval": 10,
             "gridIndex": 0,
-            "axisTick": {
-                "show": true,
-                "alignWithLabel": false,
-                "inside": false
-            },
             "inverse": false,
             "offset": 0,
             "splitNumber": 5,
+            "min": 20,
+            "max": 100,
             "minInterval": 0,
             "splitLine": {
                 "show": true,
@@ -260,7 +258,7 @@
         }
     ]
 };
-        chart_08660e9b04c34202ab53e4dfdef27249.setOption(option_08660e9b04c34202ab53e4dfdef27249);
+        chart_7b4702386fc94da1afa19ffc47093032.setOption(option_7b4702386fc94da1afa19ffc47093032);
     </script>
 </body>
 </html>
