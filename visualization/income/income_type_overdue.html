@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+</head>
+<body>
+    <h1>Overdue Percentage Ranking by Different Incoming Types</h1>
+    <div id="7de4c98f8fb3434db00eccda35a42271" class="chart-container" style="width:800px; height:500px;"></div>
+    <script>
+        var chart_7de4c98f8fb3434db00eccda35a42271 = echarts.init(
+            document.getElementById('7de4c98f8fb3434db00eccda35a42271'), 'white', {renderer: 'canvas'});
+        var option_7de4c98f8fb3434db00eccda35a42271 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "funnel",
+            "data": [
+                {
+                    "name": "Working",
+                    "value": 59.64
+                },
+                {
+                    "name": "State servant",
+                    "value": 59.56
+                },
+                {
+                    "name": "Commercial associate",
+                    "value": 58.73
+                },
+                {
+                    "name": "Pensioner",
+                    "value": 57.93
+                },
+                {
+                    "name": "Student",
+                    "value": 27.27
+                }
+            ],
+            "sort": "descending",
+            "gap": 2,
+            "label": {
+                "show": true,
+                "position": "inside",
+                "margin": 8
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{a} <br/>{b} : {c}%",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "itemStyle": {
+                "borderColor": "#fff",
+                "borderWidth": 1
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "State servant",
+                "Pensioner",
+                "Working",
+                "Student",
+                "Commercial associate"
+            ],
+            "selected": {
+                "Working": true,
+                "State servant": true,
+                "Commercial associate": true,
+                "Pensioner": true,
+                "Student": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_7de4c98f8fb3434db00eccda35a42271.setOption(option_7de4c98f8fb3434db00eccda35a42271);
+    </script>
+</body>
+</html>
