@@ -18,34 +18,41 @@ def hello_world():
 @app.route('/general')
 def general():
     if request.url.split('=')[1] == 'age':
-        return render_template("age_distribution.html")
+        return render_template("general/age_distribution.html")
     elif request.url.split('=')[1] == 'gender':
-        return render_template('gender.html')
+        return render_template('general/gender.html')
     elif request.url.split('=')[1] == 'education':
-        return render_template('education.html')
+        return render_template('general/education.html')
     else:
         return hello_world
 
 
-@app.route('/families')
-def families():
-    return render_template("families_OverDue.html")
+@app.route('/property')
+def property():
+    if request.url.split('=')[1] == 'property':
+        return render_template("property/property.html")
+    elif request.url.split('=')[1] == 'housing_type':
+        return render_template('property/house_type.html')
+    else:
+        return hello_world
 
+
+@app.route('/family')
+def family():
+    pass
+
+
+@app.route('/contact')
+def contact():
+    pass
+
+@app.route('/occupation')
+def occupation():
+    pass
 
 @app.route('/income')
 def income():
-    return render_template('meanIncome_OverDue.html')
-
-
-@app.route('/past_due')
-def past_due():
-    return render_template('pastDue_OverDue.html')
-
-
-@app.route('/real_estate')
-def real_eastate():
-    return render_template('realestateLoans_OverDue.html')
-
+    pass
 
 @app.route('/about')
 def about():
@@ -59,7 +66,7 @@ def input():
 
 @app.route('/get_input')
 def get_input():
-    birthday = request.args.get("birthday") #2022-12-05
+    birthday = request.args.get("birthday")  # 2022-12-05
     age = datetime.today() - datetime.strptime(birthday, '%Y-%m-%d')
     gender = int(request.args.get("gender"))
     education = int(request.args.get("education"))
@@ -72,7 +79,7 @@ def get_input():
     income_type = int(request.args.get("income_type"))
     occupation = int(request.args.get("occupation"))
     income = int(request.args.get("income"))
-    employ_date = request.args.get("employ_date") #2022-12-05
+    employ_date = request.args.get("employ_date")  # 2022-12-05
     employ_age = datetime.today() - datetime.strptime(employ_date, '%Y-%m-%d')
     mobile = int(request.args.get("mobile"))
     work_phone = int(request.args.get("work_phone"))
@@ -81,6 +88,7 @@ def get_input():
 
     result = {"prediction": True, "possibility": 0.8}
     return result
+
 
 # def model_1():
 #     return p
