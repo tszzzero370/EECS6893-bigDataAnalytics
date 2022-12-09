@@ -51,7 +51,7 @@ def family():
 
 @app.route('/contact')
 def contact():
-    pass
+    return render_template("contact/contact.html")
 
 @app.route('/occupation')
 def occupation():
@@ -59,6 +59,8 @@ def occupation():
         return render_template("occupation/type.html")
     elif request.url.split('=')[1] == 'status':
         return render_template('occupation/status.html')
+    elif request.url.split('=')[1] == 'days':
+        return render_template('occupation/days.html')
     else:
         return hello_world
 
