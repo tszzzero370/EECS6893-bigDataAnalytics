@@ -63,10 +63,11 @@ git clone https://github.com/youthtoday/credit-card-analysis.git
 ```
 ## 4. Install Requirements
 ```
-cd credit-card-analysis/flask
+cd credit-card-analysis
 pip install -r requirements.txt 
 ```
 ## 5. Run Project
 ```shell
+cd flask
 python app.py
 ```
