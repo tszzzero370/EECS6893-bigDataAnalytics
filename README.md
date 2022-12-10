@@ -43,8 +43,7 @@ This is a course project of EECS E6893 Big Data Analytics at Columbia University
 │   │   └── property
 │   │       ├── house_type.html
 │   │       └── property.html
-│   ├── utils.py
-│   └── visualization.py
+│   └── utils.py
 ├── machine learning
 │   ├── CreditCard_MLPforMonths.ipynb
 │   ├── CreditCard_MLPforStatus.ipynb
