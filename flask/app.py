@@ -116,7 +116,7 @@ def get_input():
     print(input_encoded)
     prob = utils.get_prob(input_encoded)
     pred = True if prob >= 0.5 else False
-    if income >= 100000:
+    if not pred and income >= 100000:
         pred = True
         prob = 0.84932765896498
     result = {"prediction": pred, "possibility": prob}
