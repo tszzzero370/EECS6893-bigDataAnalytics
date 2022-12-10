@@ -2,34 +2,67 @@
 This is a course project of EECS E6893 Big Data Analytics at Columbia University.
 ```txt
 ├── README.md
-├── analysis_demo.ipynb
-├── flask
-│   ├── app.py
-│   ├── screenshot
-│   │   └── education.png
-│   ├── static
-│   │   └── bootstrap
-│   │       └── bootstrap.5.2.2.min.css
-│   └── templates
-├── input
+├── dataset
 │   ├── README.md
 │   ├── application_record.csv
 │   ├── credit_record.csv
 │   ├── details_final.csv
-│   └── overdue_details.csv
+│   ├── overdue_details.csv
+│   └── preprocess.sql
+├── flask
+│   ├── app.py
+│   ├── model_months/
+│   ├── model_status/
+│   ├── static
+│   │   ├── bootstrap/
+│   │   └── js
+│   │       └── input.js
+│   ├── templates
+│   │   ├── about.html
+│   │   ├── base.html
+│   │   ├── contact
+│   │   │   └── contact.html
+│   │   ├── demo.html
+│   │   ├── family
+│   │   │   ├── children.html
+│   │   │   ├── marriage.html
+│   │   │   └── size.html
+│   │   ├── general
+│   │   │   ├── age_distribution.html
+│   │   │   ├── education.html
+│   │   │   └── gender.html
+│   │   ├── income
+│   │   │   ├── annual.html
+│   │   │   └── income_category.html
+│   │   ├── index.html
+│   │   ├── input.html
+│   │   ├── occupation
+│   │   │   ├── days.html
+│   │   │   ├── status.html
+│   │   │   └── type.html
+│   │   └── property
+│   │       ├── house_type.html
+│   │       └── property.html
+│   ├── utils.py
+│   └── visualization.py
+├── machine learning
+│   ├── CreditCard_MLPforMonths.ipynb
+│   ├── CreditCard_MLPforStatus.ipynb
+│   ├── Evaluate_MLPforBoth.ipynb
+│   ├── README.md
+│   ├── Utils.ipynb
+│   ├── correlation.png
+│   ├── hist_months.png
+│   ├── model_months/
+│   ├── model_status/
+│   ├── training.png
+│   └── training_months.png
 ├── requirements.txt
 └── visualization
-    ├── by_general
-    │   ├── age&gender
-    │   │   ├── age_distrbtn.html
-    │   │   ├── female_pie.html
-    │   │   └── male_pie.html
-    │   └── education
-    │       ├── education_distrbtn.html
-    │       ├── pie_edu_overdue.html
-    │       └── pie_edu_paidOff.html
-    └── by_propertyOwning
-        └── property
+    ├── visualization.py
+    ├── datasource
+    │   └── details_final.csv
+    └── html files...
 ```
 
 ## Generate overdue_details.csv
