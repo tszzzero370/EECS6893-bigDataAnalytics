@@ -2,6 +2,7 @@ $(function () {
     $("#submit").click(function (event) {
         // prevent default call
         event.preventDefault();
+        // get value from html by id
         const birthday = $("#birthday").val();
         const gender = $("#gender").val();
         const education = $("#education").val();
@@ -31,12 +32,12 @@ $(function () {
             &fixed_line="+fixed_line+"&email="+email,
                 method:"GET",
                 success: function (result) {
-                    console.log(result);
+                    let prob = result["possibility"];
                     if (result["prediction"]) {
-                        alert("Congratulations! \rYour approval possibility is " + result["possibility"]);
+                        alert("Congratulations! \rYour approval possibility is " + prob);
                     } else {
-                        alert("We are sorry that your approval probability is +" + result["probability"]+"\
-                    \rYour application might not be approved.")
+                        alert("We are sorry that your approval probability is " + prob + "\r" +
+                            "Your application might not be approved.");
                     }
                 },
                 fail: function (error) {

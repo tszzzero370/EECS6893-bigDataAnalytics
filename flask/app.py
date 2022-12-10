@@ -1,6 +1,7 @@
 from datetime import datetime
-
+import numpy as np
 from flask import Flask, render_template, request
+import utils
 
 app = Flask(__name__)
 
@@ -86,26 +87,36 @@ def input():
 @app.route('/get_input')
 def get_input():
     birthday = request.args.get("birthday")  # 2022-12-05
-    age = datetime.today() - datetime.strptime(birthday, '%Y-%m-%d')
+    age = datetime.strptime(birthday, '%Y-%m-%d') - datetime.today()
     gender = int(request.args.get("gender"))
-    education = int(request.args.get("education"))
     car = int(request.args.get("car"))
     realty = int(request.args.get("realty"))
-    housing = int(request.args.get("housing"))
-    family = int(request.args.get("family"))
     marital = int(request.args.get("marital"))
     children = int(request.args.get("children"))
-    income_type = int(request.args.get("income_type"))
-    occupation = int(request.args.get("occupation"))
     income = int(request.args.get("income"))
     employ_date = request.args.get("employ_date")  # 2022-12-05
-    employ_age = datetime.today() - datetime.strptime(employ_date, '%Y-%m-%d')
+    employ_age = datetime.strptime(employ_date, '%Y-%m-%d') - datetime.today()
     mobile = int(request.args.get("mobile"))
     work_phone = int(request.args.get("work_phone"))
     fixed_line = int(request.args.get("fixed_line"))
     email = int(request.args.get("email"))
 
-    result = {"prediction": True, "possibility": 0.8}
+    # features need one hot encoding
+    income_type = int(request.args.get("income_type"))
+    housing = int(request.args.get("housing"))
+    education = int(request.args.get("education"))
+    family = int(request.args.get("family"))
+    occupation = int(request.args.get("occupation"))
+
+    print(gender, car, realty, children, income, age.days, employ_age.days, mobile, work_phone,
+                                      fixed_line, email, family)
+
+    input_encoded = utils.get_encoded(gender, car, realty, children, income, age.days, employ_age.days, mobile, work_phone,
+                                      fixed_line, email, family, income_type, housing, education, marital, occupation)
+    print(input_encoded)
+    prob = utils.get_prob(input_encoded)
+    pred = True if prob >= 0.5 else False
+    result = {"prediction": pred, "possibility": prob}
     return result
 
 
