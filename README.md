@@ -101,7 +101,9 @@ cd credit-card-analysis
 pip install -r requirements.txt 
 ```
 ## 5. Visualizing
-The visualization results have been generated in the file './visualization'. If you want to generate them by yourself, execute command below.
+The visualization results have been generated in the file './visualization'. 
+
+If you want to generate them by yourself, execute command below.
 ```shell
 python visualization.py
 ```
@@ -109,7 +111,9 @@ python visualization.py
 After you get all html files, you should move them to the directory './flask/templates' and reorganize them to related categories.
 
 ## 6. Machine Learning
-The machine learning models have been trained and saved in the file './machine learning'. If you want train them by yourself, execute commands below.
+The machine learning models have been trained and saved in the file './machine learning'. 
+
+If you want train them by yourself, execute commands below.
 
 ...
 
