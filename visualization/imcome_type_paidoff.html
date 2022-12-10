@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+</head>
+<body>
+    <div id="cf2874f7e72d4445b75792f28824d3c4" class="chart-container" style="width:800px; height:500px;"></div>
+    <script>
+        var chart_cf2874f7e72d4445b75792f28824d3c4 = echarts.init(
+            document.getElementById('cf2874f7e72d4445b75792f28824d3c4'), 'white', {renderer: 'canvas'});
+        var option_cf2874f7e72d4445b75792f28824d3c4 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "funnel",
+            "data": [
+                {
+                    "name": "Working",
+                    "value": 40.36
+                },
+                {
+                    "name": "State servant",
+                    "value": 40.44
+                },
+                {
+                    "name": "Commercial associate",
+                    "value": 41.27
+                },
+                {
+                    "name": "Pensioner",
+                    "value": 42.07
+                },
+                {
+                    "name": "Student",
+                    "value": 72.73
+                }
+            ],
+            "sort": "descending",
+            "gap": 2,
+            "label": {
+                "show": true,
+                "position": "inside",
+                "margin": 8
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{a} <br/>{b} : {c}%",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "itemStyle": {
+                "borderColor": "#fff",
+                "borderWidth": 1
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "Student",
+                "Commercial associate",
+                "Working",
+                "Pensioner",
+                "State servant"
+            ],
+            "selected": {
+                "Working": true,
+                "State servant": true,
+                "Commercial associate": true,
+                "Pensioner": true,
+                "Student": true
+            }
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    }
+};
+        chart_cf2874f7e72d4445b75792f28824d3c4.setOption(option_cf2874f7e72d4445b75792f28824d3c4);
+    </script>
+</body>
+</html>

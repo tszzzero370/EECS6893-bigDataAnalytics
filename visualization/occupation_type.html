@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+</head>
+<body>
+    <div id="6bccc445a4b94c178027312fa28e4a29" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_6bccc445a4b94c178027312fa28e4a29 = echarts.init(
+            document.getElementById('6bccc445a4b94c178027312fa28e4a29'), 'light', {renderer: 'canvas'});
+        var option_6bccc445a4b94c178027312fa28e4a29 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "series": [
+        {
+            "type": "bar",
+            "name": "Overdue",
+            "legendHoverLink": true,
+            "data": [
+                {
+                    "value": 353,
+                    "percent": 0.5962837837837838
+                },
+                {
+                    "value": 2152,
+                    "percent": 0.6175035868005739
+                },
+                {
+                    "value": 737,
+                    "percent": 0.5938759065269944
+                },
+                {
+                    "value": 3715,
+                    "percent": 0.5981323458380293
+                },
+                {
+                    "value": 1789,
+                    "percent": 0.5939575033200531
+                },
+                {
+                    "value": 1249,
+                    "percent": 0.5841908325537886
+                },
+                {
+                    "value": 2026,
+                    "percent": 0.5641882483987747
+                },
+                {
+                    "value": 782,
+                    "percent": 0.5654374548083876
+                },
+                {
+                    "value": 306,
+                    "percent": 0.5553539019963702
+                },
+                {
+                    "value": 191,
+                    "percent": 0.5552325581395349
+                },
+                {
+                    "value": 372,
+                    "percent": 0.5679389312977099
+                },
+                {
+                    "value": 97,
+                    "percent": 0.5542857142857143
+                },
+                {
+                    "value": 781,
+                    "percent": 0.6470588235294118
+                },
+                {
+                    "value": 89,
+                    "percent": 0.5894039735099338
+                },
+                {
+                    "value": 46,
+                    "percent": 0.7666666666666667
+                },
+                {
+                    "value": 121,
+                    "percent": 0.6954022988505747
+                },
+                {
+                    "value": 51,
+                    "percent": 0.6455696202531646
+                },
+                {
+                    "value": 53,
+                    "percent": 0.6235294117647059
+                }
+            ],
+            "showBackground": false,
+            "stack": "stack1",
+            "barMinHeight": 0,
+            "barCategoryGap": "50%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": true,
+                "position": "right",
+                "margin": 8,
+                "formatter": function(x){return Number(x.data.percent * 100).toFixed() + '%';}
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        },
+        {
+            "type": "bar",
+            "name": "Paidoff",
+            "legendHoverLink": true,
+            "data": [
+                {
+                    "value": 239,
+                    "percent": 0.40371621621621623
+                },
+                {
+                    "value": 1333,
+                    "percent": 0.3824964131994261
+                },
+                {
+                    "value": 504,
+                    "percent": 0.40612409347300565
+                },
+                {
+                    "value": 2496,
+                    "percent": 0.4018676541619707
+                },
+                {
+                    "value": 1223,
+                    "percent": 0.40604249667994685
+                },
+                {
+                    "value": 889,
+                    "percent": 0.41580916744621144
+                },
+                {
+                    "value": 1565,
+                    "percent": 0.43581175160122526
+                },
+                {
+                    "value": 601,
+                    "percent": 0.4345625451916124
+                },
+                {
+                    "value": 245,
+                    "percent": 0.44464609800362975
+                },
+                {
+                    "value": 153,
+                    "percent": 0.44476744186046513
+                },
+                {
+                    "value": 283,
+                    "percent": 0.43206106870229005
+                },
+                {
+                    "value": 78,
+                    "percent": 0.44571428571428573
+                },
+                {
+                    "value": 426,
+                    "percent": 0.35294117647058826
+                },
+                {
+                    "value": 62,
+                    "percent": 0.4105960264900662
+                },
+                {
+                    "value": 14,
+                    "percent": 0.23333333333333334
+                },
+                {
+                    "value": 53,
+                    "percent": 0.3045977011494253
+                },
+                {
+                    "value": 28,
+                    "percent": 0.35443037974683544
+                },
+                {
+                    "value": 32,
+                    "percent": 0.3764705882352941
+                }
+            ],
+            "showBackground": false,
+            "stack": "stack1",
+            "barMinHeight": 0,
+            "barCategoryGap": "50%",
+            "barGap": "30%",
+            "large": false,
+            "largeThreshold": 400,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "clip": true,
+            "zlevel": 0,
+            "z": 2,
+            "label": {
+                "show": true,
+                "position": "right",
+                "margin": 8,
+                "formatter": function(x){return Number(x.data.percent * 100).toFixed() + '%';}
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "Overdue",
+                "Paidoff"
+            ],
+            "selected": {
+                "Overdue": true,
+                "Paidoff": true
+            }
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "Security",
+                "Sale",
+                "Accountants",
+                "Laborer",
+                "Manager",
+                "Driver",
+                "Core staff",
+                "High Tech",
+                "Cleaning",
+                "Private Service",
+                "Cooking",
+                "Low Tech",
+                "Medical Service",
+                "Secretary",
+                "IT",
+                "Waiter/Barmen",
+                "Realty Agent",
+                "HR"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ]
+};
+        chart_6bccc445a4b94c178027312fa28e4a29.setOption(option_6bccc445a4b94c178027312fa28e4a29);
+    </script>
+</body>
+</html>

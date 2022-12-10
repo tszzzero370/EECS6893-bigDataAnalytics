@@ -1,6 +1,0 @@
-pyspark
-pyecharts
-numpy
-tensorflow
-datetime
-flask

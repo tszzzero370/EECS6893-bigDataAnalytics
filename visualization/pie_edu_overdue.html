@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+</head>
+<body>
+    <div id="ac6c1b6c2af846a2a2e70ac54534bd21" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_ac6c1b6c2af846a2a2e70ac54534bd21 = echarts.init(
+            document.getElementById('ac6c1b6c2af846a2a2e70ac54534bd21'), 'white', {renderer: 'canvas'});
+        var option_ac6c1b6c2af846a2a2e70ac54534bd21 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "green",
+        "blue",
+        "orange"
+    ],
+    "series": [
+        {
+            "type": "pie",
+            "name": "Female Overall Distribution",
+            "clockwise": true,
+            "data": [
+                {
+                    "name": "Secondary / secondary special",
+                    "value": 14784
+                },
+                {
+                    "name": "Higher education",
+                    "value": 5643
+                },
+                {
+                    "name": "other",
+                    "value": 1128
+                }
+            ],
+            "radius": [
+                "0%",
+                "75%"
+            ],
+            "center": [
+                "50%",
+                "50%"
+            ],
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8,
+                "formatter": "{b}: {c} ({d}%)"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "{a} <br/>{b}: {c} ({d}%)",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "Secondary / secondary special",
+                "Higher education",
+                "other"
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "title": [
+        {
+            "text": "Overdue distribution group by edu_level",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_ac6c1b6c2af846a2a2e70ac54534bd21.setOption(option_ac6c1b6c2af846a2a2e70ac54534bd21);
+    </script>
+</body>
+</html>
