@@ -100,7 +100,18 @@ git clone https://github.com/youthtoday/credit-card-analysis.git
 cd credit-card-analysis
 pip install -r requirements.txt 
 ```
-## 5. Run Project
+## 5. Visualizing
+The visualization results have been generated in the file './visualization'. If you want to generate them by yourself, execute command below.
+```shell
+python visualization.py
+```
+
+## 6. Machine Learning
+The machine learning models have been trained and saved in the file './machine learning'. If you want train them by yourself, execute commands below.
+
+...
+
+## 7. Run Project
 ```shell
 cd flask
 python app.py
