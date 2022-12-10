@@ -48,3 +48,34 @@ run analysis.py
 ```shell
 python analysis.py
 ```
+
+# Deploy on Cloud Server
+## 1. pre-requisite
+```shell
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install git
+sudo apt-get install wget
+```
+## 2. Install Python Environment
+```shell
+wget https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh
+bash Anaconda3-2022.10-Linux-x86_64.sh
+source ./anaconda3/bin/activate 
+conda init
+conda create -n flask python=3.7
+conda activate flask
+```
+## 3. Install Project
+```shell
+git clone https://github.com/youthtoday/credit-card-analysis.git
+```
+## 4. Install Requirements
+```
+cd credit-card-analysis/flask
+pip install -r requirements.txt 
+```
+## 5. Run Project
+```shell
+python app.py
+```
