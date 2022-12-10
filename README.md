@@ -39,15 +39,6 @@ run **preprocess.sql** to do pre processing.
 
 export table overdue_details as a csv file.
 
-## Generate html files
-run
-```shell
-pip install -r requirements.txt
-```
-run analysis.py
-```shell
-python analysis.py
-```
 
 # Deploy on Cloud Server
 ## 1. pre-requisite
