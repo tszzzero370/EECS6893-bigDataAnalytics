@@ -5,12 +5,6 @@ import utils
 
 app = Flask(__name__)
 
-
-# Path and View
-# @app.route('Path')
-# def function():
-#     View
-
 @app.route('/')
 def hello_world():
     return render_template("index.html")
@@ -87,7 +81,7 @@ def input():
 @app.route('/get_input')
 def get_input():
     birthday = request.args.get("birthday")  # 2022-12-05
-    age = datetime.strptime(birthday, '%Y-%m-%d') - datetime.today()
+    age = (datetime.strptime(birthday, '%Y-%m-%d') - datetime.today()).days
     gender = int(request.args.get("gender"))
     car = int(request.args.get("car"))
     realty = int(request.args.get("realty"))
@@ -95,7 +89,7 @@ def get_input():
     children = int(request.args.get("children"))
     income = int(request.args.get("income"))
     employ_date = request.args.get("employ_date")  # 2022-12-05
-    employ_age = datetime.strptime(employ_date, '%Y-%m-%d') - datetime.today()
+    employ_age = (datetime.strptime(employ_date, '%Y-%m-%d') - datetime.today()).days
     mobile = int(request.args.get("mobile"))
     work_phone = int(request.args.get("work_phone"))
     fixed_line = int(request.args.get("fixed_line"))
@@ -108,17 +102,17 @@ def get_input():
     family = int(request.args.get("family"))
     occupation = int(request.args.get("occupation"))
 
-    print(gender, car, realty, children, income, age.days, employ_age.days, mobile, work_phone,
-                                      fixed_line, email, family)
+    # normalization
+    children, income, age, employ_age, family = utils.normalization(children, income, age, employ_age, family)
 
-    input_encoded = utils.get_encoded(gender, car, realty, children, income, age.days, employ_age.days, mobile, work_phone,
+    # one hot encode
+    input_encoded = utils.get_encoded(gender, car, realty, children, income, age, employ_age, mobile, work_phone,
                                       fixed_line, email, family, income_type, housing, education, marital, occupation)
-    print(input_encoded)
+
+    # machine learning test
     prob = utils.get_prob(input_encoded)
     pred = True if prob >= 0.5 else False
-    if not pred and income >= 100000:
-        pred = True
-        prob = 0.84932765896498
+
     result = {"prediction": pred, "possibility": prob}
     return result
 

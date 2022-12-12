@@ -40,10 +40,10 @@ def activation(y):
         """
     if y[0, 0] >= y[0, 1]:
         pred = 0  # give prediction
-        poss = sigmoid(y[0, 0] * 2)
+        poss = sigmoid(y[0, 0] * 3)
     else:
         pred = 1  # give prediction
-        poss = 1 - sigmoid(y[0, 1] * 2)
+        poss = 1 - sigmoid(y[0, 1] * 3)
     return pred, poss
 
 
@@ -60,7 +60,7 @@ def get_prob(input_encoded):
 
     P_status = activation(model_status.predict(input_encoded.reshape(1, 52)))[1]
     P_months = activation(model_months.predict(input_encoded.reshape(1, 52)))[1]
-    P = (P_status + P_months) / 2  # average
+    P = P_status * 3/5 + P_months * 2/5  # weighted average
     return P
 
 
@@ -92,3 +92,32 @@ def get_encoded(gender, car, realty, children, income, age, employ_age, mobile, 
     input_encoded[33 + occupation] = 1
 
     return input_encoded
+
+def normalization(children, income, age, employ_age, family):
+    # normalization
+    # ['CNT_CHILDREN']
+    min_children = 0
+    max_children = 19
+    children = (children - min_children) / (max_children - min_children)
+
+    # ['AMT_INCOME_TOTAL']
+    min_income = 0
+    max_income = 157500
+    income = (income - min_income) / (max_income - min_income)
+
+    # ['DAYS_BIRTH']
+    min_age = -25152
+    max_age = -7489
+    age = (age - min_age) / (max_age - min_age)
+
+    # ['DAYS_EMPLOYED']
+    min_work = -15713
+    max_work = 0
+    employ_age = (employ_age - min_work) / (max_work - min_work)
+
+    # ['CNT_FAM_MEMBERS']
+    min_family = 1
+    max_family = 20
+    family = (family - min_family) / (max_family - min_family)
+
+    return children, income, age, employ_age, family
