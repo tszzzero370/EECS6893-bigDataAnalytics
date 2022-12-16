@@ -1,6 +1,8 @@
 from datetime import datetime
 import numpy as np
 from flask import Flask, render_template, request
+from jinja2 import Template
+
 import utils
 
 app = Flask(__name__)
@@ -116,12 +118,6 @@ def get_input():
     result = {"prediction": pred, "possibility": prob}
     return result
 
-
-# def model_1():
-#     return p
-#
-# def model_2():
-#     return p
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
