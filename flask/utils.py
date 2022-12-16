@@ -40,10 +40,10 @@ def activation(y):
         """
     if y[0, 0] >= y[0, 1]:
         pred = 0  # give prediction
-        poss = sigmoid(y[0, 0] * 3)
+        poss = sigmoid(y[0, 0] * 2)
     else:
         pred = 1  # give prediction
-        poss = 1 - sigmoid(y[0, 1] * 3)
+        poss = 1 - sigmoid(y[0, 1] * 2)
     return pred, poss
 
 
@@ -60,7 +60,7 @@ def get_prob(input_encoded):
 
     P_status = activation(model_status.predict(input_encoded.reshape(1, 52)))[1]
     P_months = activation(model_months.predict(input_encoded.reshape(1, 52)))[1]
-    P = P_status * 3/5 + P_months * 2/5  # weighted average
+    P = P_status * 3/5 + P_months * 1/10  # weighted average
     return P
 
 
