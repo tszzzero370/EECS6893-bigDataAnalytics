@@ -104,6 +104,9 @@ def get_input():
     family = int(request.args.get("family"))
     occupation = int(request.args.get("occupation"))
 
+    print(birthday, age, gender, car, realty, marital, children, income, employ_date, employ_age, mobile, work_phone,
+          fixed_line, email)
+
     # normalization
     children, income, age, employ_age, family = utils.normalization(children, income, age, employ_age, family)
 
