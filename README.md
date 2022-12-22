@@ -64,15 +64,6 @@ This is a course project of EECS E6893 Big Data Analytics at Columbia University
     └── html files...
 ```
 
-# Process CSV files
-Create a schema in mysql and load csv files in "./input" to mysql databases.
-
-run **preprocess.sql** to do pre processing. 
-
-export table overdue_details as a csv file.
-
-...
-
 # Deploy on Cloud Server
 ## 1. pre-requisite
 ```shell
@@ -99,24 +90,7 @@ git clone https://github.com/youthtoday/credit-card-analysis.git
 cd credit-card-analysis
 pip install -r requirements.txt 
 ```
-## 5. Visualizing
-The visualization results have been generated in the file './visualization'. 
-
-If you want to generate them by yourself, execute command below.
-```shell
-python visualization.py
-```
-
-After you get all html files, you should move them to the directory './flask/templates' and reorganize them to related categories.
-
-## 6. Machine Learning
-The machine learning models have been trained and saved in the file './machine learning'. 
-
-If you want train them by yourself, execute commands below.
-
-...
-
-## 7. Run Project
+## 5. Run Project
 ```shell
 cd flask
 python app.py
